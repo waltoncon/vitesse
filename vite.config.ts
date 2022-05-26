@@ -48,11 +48,11 @@ export default defineConfig({
                 '@vueuse/core',
             ],
             dts: 'src/auto-imports.d.ts',
-      dirs: [
-        'src/composables',
-        'src/store',
-      ],
-      vueTemplate: true,
+            dirs: [
+                'src/composables',
+                'src/store',
+            ],
+            vueTemplate: true,
         }),
 
         // https://github.com/antfu/unplugin-vue-components
@@ -131,7 +131,9 @@ export default defineConfig({
     ssgOptions: {
         script: 'async',
         formatting: 'minify',
-        onFinished() { generateSitemap(); },
+        onFinished() {
+            generateSitemap();
+        },
     },
 
     // https://github.com/vitest-dev/vitest
